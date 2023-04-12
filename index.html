@@ -1,0 +1,88 @@
+<!-- Fixed dev branch -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Daily</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bfj3agg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="">
+    <header>
+      <h1 class="center-align">Cosmic Daily</h1>
+    </header>
+    <main>
+        <section class = 'row'>
+                                                <!-- NASA pic of the datepicker -->
+            <div id="nasa-search" class=" col offset-s8 right-align">
+                <label for="">Choose a date to see NASA's image of the day for that day.</label>
+                <input type="text" id="date-search"  class="right-align datepicker white-text" name="date-search" placeholder=" Enter your date here" >
+                <button class="waves-effect waves-light btn grey darken-2" type="submit" id="APOD-Search">Search</button>
+            </div>
+                                                <!-- Hero Pic -->
+            <section class = 'col' id="APOD">
+                <img class="hero" src="" alt="NASA picture of the day">
+                                                  <!-- Collapsible description box -->
+                <ul id="pic-info" class="collapsible">
+                    <li >
+                      <div class="collapsible-header n/a transparent white-text">Click here to learn more about the image!</div>
+                      <div class="collapsible-body 5"><span id='APOD-Desc'></span></div>
+                    </li>
+                </ul>        
+            </section>
+      </section>
+                                                        <!-- Asteroid section -->
+      <article id="asteroid-section" class="row">
+        <h2 id="asteroidH2">Asteroid Observatory:</h2> <h2 id="asteroidSub">Random Images and In-Depth Analysis</h2>
+                                                        <!-- Photo of asteroid -->
+        <div id="asteroid-profile" class="col l6 s12">
+          <h2 id="asteroid-name">EROS</h2>
+          <img
+            id="asteroid"
+            src="assets/images/asteroid-9.png"
+            alt="pic of asteroid"
+          />
+        </div>
+                                                        <!-- Asteroid Search -->
+        <div id = 'asteroid-search' class = 'col l6 s6'>
+          <div id="asteroidDiv">
+            <label for="">Choose a date to see NEOs</label>
+            <input type="text" id="asteroid-date-search"  class="datepicker" name="asteroid-date-search" placeholder=" Enter your date here" >
+            <button class="waves-effect waves-light btn grey darken-2" type="submit" id="Asteroid-Search">Search</button>
+          </div>
+        </div>
+                                                        <!-- Asteroid STATS -->
+        <div id="asteroid-layout-rightside" class="col l6 s12">
+          <div id="text-area">
+            <ul id="statistics">
+              <li id = "orbit">Orbiting body:</li>
+              <li id = "diam">Estimated diameter:</li>
+              <li id = "miss">Miss distance:</li>
+              <li id = "close">Close approach date:</li>
+              <li id = "speed">Velocity:</li>
+            </ul>
+          </div>
+          <button  id = 'prev' class="waves-effect waves-light btn grey darken-2">Prev</button>
+          <button id = 'next'class="waves-effect waves-light btn grey darken-2">Next</button>
+        </div>
+        </div>
+      </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
